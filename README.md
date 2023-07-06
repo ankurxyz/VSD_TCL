@@ -70,3 +70,34 @@ Displays an error when the required file is not in the needed directory
 ![filesmissing](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day2/files_missing.png)
 
 
+
+## DAY-3
+__Converting inputs to format[1] and feeding it to yosys for synthesis__
+
+  __- Working on Clock Constraints__
+
+![clock constraints]()  
+
+  __- Clock SDC Constraints__
+
+![clock constraints 2]()
+
+  __- Working On Input Constraints__
+
+![INput constraints1]()
+
+  __-Formatting data for Input Constraints__
+
+![INput constraints 2]()
+
+  __- Differentiating Buses from single bit signals__
+
+![INput constraints 3]()  
+
+  __- Working on Output constraints__
+
+![Output constraints 1]()
+
+  __- Output Constraints__
+
+![Output Constraints 2]()
