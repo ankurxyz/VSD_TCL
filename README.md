@@ -50,4 +50,23 @@ echo "             *****             ****************       ***************    "
 ![helpoption](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day1/help_option.png)
 
  
+## DAY-2
+__Converting inputs to format[1] and feeding it to yosys for synthesis__
+
+  __- CSV File__
+
+![csv file](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day2/csv_file.png)  
+
+  __- Create Variables__
+
+![creating variables](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day2/creating_variables.png)
+
+  __- Checking if the directories exist or not ( done to prevent the script from breaking )__
+
+![locating files and directories](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day2/locating_files_directories.png)
+
+Displays an error when the required file is not in the needed directory
+
+![filesmissing](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day2/files_missing.png)
+
 
