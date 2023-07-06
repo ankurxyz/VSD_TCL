@@ -41,9 +41,7 @@ echo "             *****             ****************       ***************    "
 
 ![nocsvfile.png](https://drive.google.com/file/d/1FBsPIF43I77XKfuad8YhMnA-MUAKcL5I/view?usp=sharing)
 
-
   - user enters the wrong csv file/ file doesnt exist
-
 
 ![wrongcsvfile](https://drive.google.com/file/d/11wNHSQknUHQn9acU9cL2CpNKawDMXBE4/view?usp=sharing)
 
