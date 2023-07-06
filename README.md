@@ -76,28 +76,28 @@ __Converting inputs to format[1] and feeding it to yosys for synthesis__
 
   __- Working on Clock Constraints__
 
-![clock constraints]()  
+![clock constraints](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/writing_clk_constraints.png) 
 
   __- Clock SDC Constraints__
 
-![clock constraints 2]()
+![clock constraints 2](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/clk_sdc_constraints.png)
 
   __- Working On Input Constraints__
 
-![INput constraints1]()
+![INput constraints1](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/working_on_input_constraints.png)
 
   __-Formatting data for Input Constraints__
 
-![INput constraints 2]()
+![INput constraints 2](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/formatting%20data%20for%20IO%20Constraints.png)
 
   __- Differentiating Buses from single bit signals__
 
-![INput constraints 3]()  
+![INput constraints 3](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/differentiating%20buses%20from%20one%20bit%20signals.png)  
 
   __- Working on Output constraints__
 
-![Output constraints 1]()
+![Output constraints 1](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/working%20on%20output%20constraints.png)
 
   __- Output Constraints__
 
-![Output Constraints 2]()
+![Output Constraints 2](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/output_constraints.png)
