@@ -144,3 +144,35 @@ __- Feeding RTL Netlist, SDC's and standard cell library to Yosys EDA tool for s
   __- Hierarchy check test passed__
 
 ![Hierarchy check test passed](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/10_hierarchy_check_test_passed.png)
+
+## DAY-5
+__- Converting Yosys tool output to a format compatible with opentimer__
+
+  __- Synthesizing Netlist__
+
+![Synthesizing Netlist]() 
+
+  __- Formatting synthesized netlist for opentimer__
+
+![Formatting synthesized netlist for opentimer]()
+
+  __- formatting - removing asterisk__
+
+![formatting - removing asterisk]()
+
+  __-formatting replacing backslash with null__
+
+![formatting replacing backslash with null]()
+
+  __- Multi CPU Usage Proc__
+
+![Multi CPU Usage Proc]()  
+
+  __- Executing Procs__
+
+![Executing Procs]()
+
+  __- Proc Output in conf file__
+
+![Proc Output in conf file]()
+
