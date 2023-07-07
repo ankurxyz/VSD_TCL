@@ -107,40 +107,40 @@ __- Feeding RTL Netlist, SDC's and standard cell library to Yosys EDA tool for s
 
   __- RTL Netlist__
 
-![RTL Netlist]() 
+![RTL Netlist](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/1_RTL%20Netlist%20for%20Yosys%20tool.png) 
 
   __- Reading RTL Netlist__
 
-![Reading RTL Netlist]()
+![Reading RTL Netlist](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/2_Reading%20RTL%20Netlist.png)
 
   __- Checking hierarchy using flag__
 
-![Checking hierarchy using flag]()
+![Checking hierarchy using flag](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/3_checking_hierarchy%20using%20flag.png)
 
   __-syntax error__
 
-![Syntax Error]()
+![Syntax Error](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/4_syntax_error.png)
 
   __- Resolving syntax error__
 
-![Resolving syntax error]()  
+![Resolving syntax error](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/5_resolving%20syntax%20error.png)  
 
   __- Hierarchy check test failed__
 
-![Hierarchy check test failed]()
+![Hierarchy check test failed](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/6_hierarchy_check_test_failed.png)
 
   __- Checking log file__
 
-![Checking log file]()
+![Checking log file](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/7_checking_log_file.png)
 
   __- Name Error__
 
-![Name Error]()  
+![Name Error](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/8_Name_error.png)  
 
   __- Correcting name error__
 
-![Correcting name error]()
+![Correcting name error](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/9_correcting_error.png)
 
   __- Hierarchy check test passed__
 
-![Hierarchy check test passed]()
+![Hierarchy check test passed](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/10_hierarchy_check_test_passed.png)
