@@ -101,3 +101,46 @@ __Converting inputs to format[1] and feeding it to yosys for synthesis__
   __- Output Constraints__
 
 ![Output Constraints 2](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/output_constraints.png)
+
+## DAY-4
+__- Feeding RTL Netlist, SDC's and standard cell library to Yosys EDA tool for synthesis__
+
+  __- RTL Netlist__
+
+![RTL Netlist]() 
+
+  __- Reading RTL Netlist__
+
+![Reading RTL Netlist]()
+
+  __- Checking hierarchy using flag__
+
+![Checking hierarchy using flag]()
+
+  __-syntax error__
+
+![Syntax Error]()
+
+  __- Resolving syntax error__
+
+![Resolving syntax error]()  
+
+  __- Hierarchy check test failed__
+
+![Hierarchy check test failed]()
+
+  __- Checking log file__
+
+![Checking log file]()
+
+  __- Name Error__
+
+![Name Error]()  
+
+  __- Correcting name error__
+
+![Correcting name error]()
+
+  __- Hierarchy check test passed__
+
+![Hierarchy check test passed]()
