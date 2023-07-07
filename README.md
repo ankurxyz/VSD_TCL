@@ -150,29 +150,29 @@ __- Converting Yosys tool output to a format compatible with opentimer__
 
   __- Synthesizing Netlist__
 
-![Synthesizing Netlist]() 
+![Synthesizing Netlist](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/1_Synthesizing_netlist.png) 
 
   __- Formatting synthesized netlist for opentimer__
 
-![Formatting synthesized netlist for opentimer]()
+![Formatting synthesized netlist for opentimer](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/2_formatting_synthesized_netlist_for_opentimer.png)
 
   __- formatting - removing asterisk__
 
-![formatting - removing asterisk]()
+![formatting - removing asterisk](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/3_formatting_removing_asterisk.png)
 
   __-formatting replacing backslash with null__
 
-![formatting replacing backslash with null]()
+![formatting replacing backslash with null](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/4_formatting_replacing_back_slash_with_null.png)
 
   __- Multi CPU Usage Proc__
 
-![Multi CPU Usage Proc]()  
+![Multi CPU Usage Proc](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/5_multi_cpu_usage_proc.png)  
 
   __- Executing Procs__
 
-![Executing Procs]()
+![Executing Procs](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/6_executing_procs.png)
 
   __- Proc Output in conf file__
 
-![Proc Output in conf file]()
+![Proc Output in conf file](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/7_proc_output_in_conf_file.png)
 
