@@ -176,3 +176,23 @@ __- Converting Yosys tool output to a format compatible with opentimer__
 
 ![Proc Output in conf file](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/7_proc_output_in_conf_file.png)
 
+  __- Formatting create clock constraints for opentimer__
+
+![Formatting create clock constraints for opentimer]() 
+
+  __- Formatting clock latency constraints__
+
+![Formatting clock latency constraints]()
+
+  __- Formatting clock transition constraints__
+
+![Formatting clock transition constraints]()
+
+  __- Formatting input delay constraints__
+
+![Formatting input delay constraints]()
+
+  __- Formatting output delay and load constraints__
+
+![Formatting output delay and load constraints]()  
+
