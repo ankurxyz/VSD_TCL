@@ -178,21 +178,21 @@ __- Converting Yosys tool output to a format compatible with opentimer__
 
   __- Formatting create clock constraints for opentimer__
 
-![Formatting create clock constraints for opentimer]() 
+![Formatting create clock constraints for opentimer](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/8_formatting_create_clock_constraints_for_opentimer.png) 
 
   __- Formatting clock latency constraints__
 
-![Formatting clock latency constraints]()
+![Formatting clock latency constraints](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/9_formatting_clock_latency_constraints.png)
 
   __- Formatting clock transition constraints__
 
-![Formatting clock transition constraints]()
+![Formatting clock transition constraints](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/10_formatting_clock_transition_constraints.png)
 
   __- Formatting input delay constraints__
 
-![Formatting input delay constraints]()
+![Formatting input delay constraints](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/11_formatting_input_delay_constraints.png)
 
   __- Formatting output delay and load constraints__
 
-![Formatting output delay and load constraints]()  
+![Formatting output delay and load constraints](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/12_formatting_output_delay_load_constraints.png)  
 
