@@ -194,5 +194,25 @@ __- Converting Yosys tool output to a format compatible with opentimer__
 
   __- Formatting output delay and load constraints__
 
-![Formatting output delay and load constraints](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/12_formatting_output_delay_load_constraints.png)  
+![Formatting output delay and load constraints](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/12_formatting_output_delay_load_constraints.png)
+  
+__- Formatting constraints with bus signals__
+
+![Formatting constraints with bus signals]() 
+
+  __- Opentimer tool specific commands added__
+
+![Opentimer tool specific commands added]()
+
+  __- Final .conf file__
+
+![Final .conf file]()
+
+  __- Opentimer Output__
+
+![Opentimer Output]()
+
+  __- Formatting Timing Report__
+
+![Formatting Timing Report]()  
 
