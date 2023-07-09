@@ -47,14 +47,14 @@ Here our TCL script takes one argument as *.csv* file. Now there can be two case
 
 
 <div align="center">
-![nocsvfile](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day1/no_csv_file.png)
+    <img nocsvfile="https://github.com/ankurxyz/VSD_TCL/blob/main/images/day1/no_csv_file.png">
 </div>
 
 
 **Case2:** User gives *.csv* file as an argument but a wrong one or the path to *.csv* file is incorrect. 
 
 <div align="center">
-![wrongcsvfile](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day1/wrong_csv_file.png)
+    <img wrongcsvfile="https://github.com/ankurxyz/VSD_TCL/blob/main/images/day1/wrong_csv_file.png">
 </div>
 
 In such cases the user can exercise the `-help` option for this particualr script to pass correct argument to the script. 
