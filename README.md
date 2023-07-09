@@ -46,9 +46,9 @@ Here our TCL script takes one argument as *.csv* file. Now there can be two case
 **Case1:** User doesn't give any argument as a *.csv* file to the TCL script.
 
 
-<div align="center">
-    <img nocsvfile="https://github.com/ankurxyz/VSD_TCL/blob/main/images/day1/no_csv_file.png">
-</div>
+<p align="center">
+    <img nocsvfile="https://github.com/ankurxyz/VSD_TCL/blob/main/images/day1/no_csv_file.png"/>
+</p>
 
 
 **Case2:** User gives *.csv* file as an argument but a wrong one or the path to *.csv* file is incorrect. 
