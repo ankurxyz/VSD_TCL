@@ -80,32 +80,31 @@ __Mapping openMSP430_design_constraints.csv file to format[1] compatible with Yo
 
 SDC is a widely used industry standard by which constraints are defined for a digital design. Now let's extract clock information from the csv file, process that information for creating clock SDC constraints. Then add those clock SDC constraints to the script and run it. 
 
-![clock constraints](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/writing_clk_constraints.png) 
+![clock constraints](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/1_writing_clk_constraints.png) 
 
 Here is how the clock SDC constraints look like
 
-![clock constraints 2](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/clk_sdc_constraints.png)
+![clock constraints 2](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/2_clk_sdc_constraints.png)
 
-Next we can do the same thing for Input signals as well. The only difference in processing of input signals is that the input signal can be a bus or just a 1 bit signal in the netlist directory of *.v files. The SDC constraints of a bus signal from single bit signal are differentiated by asterisk(*).   
-So all the input signals from openMSP430_design_constraints.csv file need to be looked into the netlist directory of *.v files to check whether the signal is a input vector of length 1 or greater than 1.
+Next we can do the same thing for Input signals as well. The only difference in processing of input signals is that the input signal can be a bus or just a 1 bit signal in the netlist directory of *.v files. The SDC constraints of a bus signal from single bit signal are differentiated by asterisk(*). So all the input signals from openMSP430_design_constraints.csv file need to be looked into the netlist directory of *.v files to check whether the signal is a input vector of length 1 or greater than 1.
 
-![Input constraints1](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/working_on_input_constraints.png)
+![Input constraints1](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/3_working_on_input_constraints.png)
 
 Here is a print of some formatting done of the input signals that are retrieved from *.v files in the Netlist directory.
 
-![INput constraints 2](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/formatting%20data%20for%20IO%20Constraints.png)
+![Input constraints 2](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/4_formatting%20data%20for%20IO%20Constraints.png)
 
 If the input signal grepped from *.v file with ; as the delimiter and in subsequent processing " " as the delimiter we come to know that if count i.e. length of list is 3 then the it's a bus else it's a 1 bit signal.
 
-![INput constraints 3](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/differentiating%20buses%20from%20one%20bit%20signals.png)  
+![Input constraints 3](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/5_differentiating%20buses%20from%20one%20bit%20signals.png)
 
 To map Output signal constraints to SDC we need to follow the same steps as we did for input constraints. 
 
-![Output constraints 1](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/working%20on%20output%20constraints.png)
+![Output constraints 1](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/6_working%20on%20output%20constraints.png)
 
-Here is a snapshot of output and load SDC constraints. Load is used to map the capacitance present at the output.  
+Here is a snapshot of output and load SDC constraints. Load is used to map the capacitance present at the output.
 
-![Output Constraints 2](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/output_constraints.png)
+![Output Constraints 2](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/7_output_constraints.png)
 
 ## DAY-4
 __- Feeding RTL Netlist and standard cell library to Yosys EDA tool for Synthesis__
