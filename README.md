@@ -46,20 +46,20 @@ Here our TCL script takes one argument as *.csv* file. Now there can be two case
 **Case1:** User doesn't give any argument as a *.csv* file to the TCL script.
 
 
-<p style="text-align: center"><img nocsvfile="https://github.com/ankurxyz/VSD_TCL/blob/main/images/day1/no_csv_file.png"></p>
+![nocsvfile](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day1/no_csv_file.png)
 
 
 **Case2:** User gives *.csv* file as an argument but a wrong one or the path to *.csv* file is incorrect. 
 
-<div align="center" width="100%">
-    <img width="100%" wrongcsvfile="https://github.com/ankurxyz/VSD_TCL/blob/main/images/day1/wrong_csv_file.png">
-</div>
+
+![wrongcsvfile](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day1/wrong_csv_file.png)
+
 
 In such cases the user can exercise the `-help` option for this particualr script to pass correct argument to the script. 
 
-<div align="center">
+
 ![helpoption](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day1/help_option.png)
-</div>
+
 
 ----------------------------------------------------------------------------------------------------------
  
@@ -69,27 +69,27 @@ In such cases the user can exercise the `-help` option for this particualr scrip
 
 - Here is how the *openMSP430_design_details.csv* file looks like:
 
-<div align="center">
+
 ![csv file](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day2/csv_file.png)
-</div>
+
 
 - To operate on this data contained in the *.csv* file, we need to create variables/pointers in our TCL script that can point to this information contained in *.csv* file. A good way is to use a 2-D array in the TCL script for mapping data contained in *.csv* file. 
 
-<div align="center"> 
+ 
 ![creating variables](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day2/creating_variables.png)
-</div>
+
 
 - Now there maybe cases when the path given to the files required for generating final results is incorrect or the files are missing in the given directory. In such case the script must catch the error and print the error on console as shown below
 
-<div align="center">
+
 ![filesmissing](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day2/files_missing.png)
-</div>
+
 
 - Hence by identifying such errors one can give correct path to files and continue with further execution of the script
 
-<div align="center">
+
 ![locating files and directories](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day2/locating_files_directories.png)
-</div>
+
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -99,45 +99,45 @@ In such cases the user can exercise the `-help` option for this particualr scrip
 
 - SDC is a widely used industry standard by which constraints are defined for a digital design. Now let's extract clock information from the *.csv* file, process that information for creating clock SDC constraints. Then add those clock SDC constraints to the script and run it. 
 
-<div align="center">
+
 ![clock constraints](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/1_writing_clk_constraints.png) 
-</div>
+
 
 - Here is how the clock SDC constraints look like:
 
-<div align="center">
+
 ![clock constraints 2](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/2_clk_sdc_constraints.png)
-</div>
+
 
 - Next we can do the same thing for Input signals as well. The only difference in processing of input signals is that the input signal can be a bus or just a 1 bit signal in the netlist directory of *\*.v* files. The SDC constraints of a bus signal from single bit signal are differentiated by asterisk(\*). So all the input signals from openMSP430_design_constraints.csv file need to be looked into the netlist directory of *\*.v* files to check whether the signal is a input vector of length 1 or greater than 1.
 
-<div align="center">
+
 ![Input constraints1](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/3_working_on_input_constraints.png)
-</div>
+
 
 - Here is a print of some formatting done of the input signals that are retrieved from *\*.v* files in the Netlist directory.
 
-<div align="center">
+
 ![Input constraints 2](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/4_formatting%20data%20for%20IO%20Constraints.png)
-</div>
+
 
 - If the input signal grepped from *\*.v* file with *;* as the delimiter and in subsequent processing *" "* as the delimiter we come to know that if count i.e. length of list is 3 then the it's a bus else it's a 1 bit signal.
 
-<div align="center">
+
 ![Input constraints 3](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/5_differentiating%20buses%20from%20one%20bit%20signals.png)
-</div>
+
 
 - To map Output signal constraints to SDC we need to follow the same steps as we did for input constraints. 
 
-<div align="center">
+
 ![Output constraints 1](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/6_working%20on%20output%20constraints.png)
-</div>
+
 
 - Here is a snapshot of output and load SDC constraints. Load is used to map the capacitance present at the output.
 
-<div align="center">
+
 ![Output Constraints 2](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/7_output_constraints.png)
-</div>
+
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -147,63 +147,63 @@ In such cases the user can exercise the `-help` option for this particualr scrip
 
 - Before feeding RTL netlist to EDA tool for synthesis, it's best to validate the RTL netlist. So we do a hierarchy check. We start first by retrieving the netlist in a variable called as data as shown below: 
 
-<div align="center">
+
 ![RTL Netlist](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/1_RTL%20Netlist%20for%20Yosys%20tool.png) 
-</div>
+
 
 - For each RTL Netlist we do a syntax check by appending the command(specific to Yosys) corresponding to that operation in the *openMSP430.hier.ys* file and at the end of file we append the command corresponding to hierarchy check in the *openMSP430.hier.ys* file.
 
-<div align="center">
+
 ![Reading RTL Netlist](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/2_Reading%20RTL%20Netlist.png)
-</div>
+
 
 - We give this *openMSP430.hier.ys* file as an input to Yosys tool to check for syntax/hierarchy and report back if there is any error. If there is an error during the execution err flag is set to 1. 
 
-<div align="center">
+
 ![Checking hierarchy using flag](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/3_checking_hierarchy%20using%20flag.png)
-</div>
+
 
 - On checking the *openMSP430.hierarchy_check.log* it was clear tha it's a syntax error.
 
-<div align="center">
+
 ![Syntax Error](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/4_syntax_error.png)
-</div>
+
 
 - So we resolved it and now the err flag is set to 0.
 
-<div align="center">
+
 ![Resolving syntax error](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/5_resolving%20syntax%20error.png)
-</div>
+
 
 - At another time i had this error where the hierarchy check test failed!
 
-<div align="center">
+
 ![Hierarchy check test failed](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/6_hierarchy_check_test_failed.png)
-</div>
+
 
 - So again looked into the log file and found that it's a module instantiation error.
 
-<div align="center">
+
 ![Checking log file](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/7_checking_log_file.png)
-</div>
+
 
 - There was no module defined by the name of *omsp_clock_module_1*. Rather the module that is defined was *omsp_clock_module*.
 
-<div align="center">
+
 ![Name Error](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/8_Name_error.png)
-</div>
+
 
 - So i changed the parent module name to *omsp_clock_module*.
 
-<div align="center">
+
 ![Correcting name error](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/9_correcting_error.png)
-</div>
+
 
 - And then the Hierarchy check also Passed! :)
 
-<div align="center">
+
 ![Hierarchy check test passed](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/10_hierarchy_check_test_passed.png)
-</div>
+
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -213,33 +213,33 @@ In such cases the user can exercise the `-help` option for this particualr scrip
 
 - We feed the standard cell library and RTL Netlist referenced through the *openMSP430.ys* file to Yosys EDA tool for creating gate level synthesized netlist in the file *openMSP430.synth.v*.
 
-<div align="center">
+
 ![Synthesizing Netlist](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/1_Synthesizing_netlist.png) 
-</div>
+
 
 - Now we need to format the *openMSP430.synth.v* file to a format that is compatible with the opentimer EDA tool. So from the *openMSP430.synth.v* we remove all the lines containing an asterisk(\*) symbol and replace backslash(\\) symbol with a null character(*""*) to generate *openMSP430.final.synth.v* file 
 
-<div align="center">
+
 ![Formatting synthesized netlist for opentimer](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/2_formatting_synthesized_netlist_for_opentimer.png)
-</div>
+
 
 - Here is an example of how the formatting is done for *openMSP430.synth.v* file by removing the asterisk symbol from it. 
 
-<div align="center">
+
 ![formatting - removing asterisk](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/3_formatting_removing_asterisk.png)
-</div>
+
 
 - The below snapshot shows how the formatting is done for *openMSP430.synth.v* file by replacing *"\\"* character with a *""* character
 
-<div align="center">
+
 ![formatting replacing backslash with null](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/4_formatting_replacing_back_slash_with_null.png)
-</div>
+
 
 - Proc is just like a function. We can define it in a file and then just source that proc to our main script and call that proc just like any other function by passing the required options and arguments. Here is an example of one of the proc used to define the number of threads.
 
-<div align="center">
+
 ![Multi CPU Usage Proc](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/5_multi_cpu_usage_proc.png)
-</div>
+
 
 - We have used 5 procs in our script:
 
@@ -251,69 +251,69 @@ In such cases the user can exercise the `-help` option for this particualr scrip
  
 - Below snapshot shows the execution of procs:
 
-<div align="center">
+
 ![Executing Procs](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/6_executing_procs.png)
-</div>
+
 
 - The output commands generated on execution of these procs are added into the *openMSP430.conf* file. These commands are compatible with the opentimer EDA tool for timing analysis. 
 
-<div align="center">
+
 ![Proc Output in conf file](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/7_proc_output_in_conf_file.png)
-</div>
+
 
 - Here is an example of how the SDC constraints need to be formatted for opentimer inference. This is done by making use of the *read_sdc.proc*. Using this proc we read the sdc file, remove the square brackets and define clock by it's name, period and *%* duty cycle only and then dump the final result as a command compatible with opentimer into *openMSP430.timing* file.
 
-<div align="center">
+
 ![Formatting create clock constraints for opentimer](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/8_formatting_create_clock_constraints_for_opentimer.png) 
-</div>
+
 
 - Below image shows the formatting done for clock latency constraints. 
 
-<div align="center">
+
 ![Formatting clock latency constraints](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/9_formatting_clock_latency_constraints.png)
-</div>
+
 
 - Here we do the formatting for clock transition constraints.
 
-<div align="center">
+
 ![Formatting clock transition constraints](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/10_formatting_clock_transition_constraints.png)
-</div>
+
 
 - Then input delay constraints.....
 
-<div align="center">
+
 ![Formatting input delay constraints](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/11_formatting_input_delay_constraints.png)
-</div>
+
 
 - Not to forget the formatting for output delay and load constraints...
 
-<div align="center">
+
 ![Formatting output delay and load constraints](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/12_formatting_output_delay_load_constraints.png)
-</div>
+
   
 - And finally the formatting need to be done for bus signals.
 
-<div align="center">
+
 ![Formatting constraints with bus signals](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/13_formatting_bussed_io_constraints.png) 
-</div>
+
 
 - We then enable the prelayout timing variable to not take into account wire load parasitics as the routing has not been done. So essentially the load parasitic value is set to zero. 
 
-<div align="center">
+
 ![Opentimer tool specific commands added](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/14_timing_info_added.png)
-</div>
+
 
 - This is how the final *openMSP430.conf* file looks like. Here the *openMSP430.spef* file contain design specification. And then there are other timing related commands appended to *openMSP430.conf* file. These commands are specific to opentimer EDA tool only. 
 
-<div align="center">
+
 ![Final .conf file](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/15_final_conf_file.png)
-</div>
+
 
 - We give the *openMSP430.conf* file and *openMSP430.timing* file as an input to the opentimer EDA tool and get the timing results as shown below:
 
-<div align="center">
+
 ![Opentimer Output](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/16_opentimer_output.png)
-</div>
+
 
 1. Runtime is calculated by using the 'time' command of opentimer. 
 2. Instance count is calculated by grepping the string *"Num of gates"* from the file *openMSP430.results.*
@@ -321,8 +321,8 @@ In such cases the user can exercise the `-help` option for this particualr scrip
 4. FEP Setup is calculated by counting the number of occurence of string "Setup" in the file *openMSP430.results.* 
 5. The method used for calculating setup violations is the same that is used for calculating hold violations and output violations as well. Only the keyword *Hold* need to be used in place of *Setup* for calculating Hold violations and keyword *RAT* need to be used in place of *Setup* for calculating output violations. 
 
-<div align="center">
+
 ![Formatting Timing Report](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/17_timing_report_formatting.png)
-</div>
+
 
 # Thanks For Watching My Repo. I Hope You Liked It :D
