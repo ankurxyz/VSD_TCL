@@ -24,7 +24,7 @@ echo $SHELL
 There can be multiple shell installed on the system but at any one point in time only one shell can interact between the application and the OS.
 
 The below statement in TCL script is also called as *shebang* which is written at the beginning of the TCL script. It tells the OS about the interpreter that should be used to execute the script.
-Since in this case TCL shell is used to execute the script so the path to TCL shell program is provided.
+Since the script is written TCL, we should give path to TCL shell program to execute this script.
 ```
 #!/bin/tcsh -f  
 ```
@@ -41,9 +41,9 @@ echo "             *****             ****************       ***************    "
 echo "             *****             ****************       ***************    "
 ```
 
-Here our TCL script takes one argument as *.csv* file. Now there can be two cases under which the script will not work:
+Here our TCL script takes *openMSP430_design_details.csv* file as an argument. Now there can be two cases under which the script will not work:
 
-**Case1:** User doesn't give any argument as a *.csv* file to the TCL script.
+**Case1:** User doesn't give any argument to the TCL script.
 
 
 ![nocsvfile](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day1/no_csv_file.png)
@@ -55,7 +55,7 @@ Here our TCL script takes one argument as *.csv* file. Now there can be two case
 ![wrongcsvfile](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day1/wrong_csv_file.png)
 
 
-In such cases the user can exercise the `-help` option for this particualr script to pass correct argument to the script. 
+In such cases the user can exercise the `-help` option for this particular script to know the steps involved in correct execution of the script.
 
 
 ![helpoption](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day1/help_option.png)
@@ -73,19 +73,19 @@ In such cases the user can exercise the `-help` option for this particualr scrip
 ![csv file](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day2/csv_file.png)
 
 
-- To operate on this data contained in the *.csv* file, we need to create variables/pointers in our TCL script that can point to this information contained in *.csv* file. A good way is to use a 2-D array in the TCL script for mapping data contained in *.csv* file. 
+- To operate on this data contained in the *openMSP43_design_details.csv* file, we need to create variables/pointers in our TCL script that can point to the information contained in *openMSP43_design_details.csv* file. A good way is to use a 2-D array datatype in the TCL script for mapping data contained in *openMSP430_design_details.csv* file. 
 
  
 ![creating variables](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day2/creating_variables.png)
 
 
-- Now there maybe cases when the path given to the files required for generating final results is incorrect or the files are missing in the given directory. In such case the script must catch the error and print the error on console as shown below
+- Now there maybe cases that the path given in *openMSP430_design_details.csv* file is incorrect. In such case the script must catch the error and print that error on to the console as shown below
 
 
 ![filesmissing](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day2/files_missing.png)
 
 
-- Hence by identifying such errors one can give correct path to files and continue with further execution of the script
+- Hence by catching and correcting such errors, one can continue with further execution of the script.
 
 
 ![locating files and directories](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day2/locating_files_directories.png)
@@ -97,7 +97,7 @@ In such cases the user can exercise the `-help` option for this particualr scrip
 
 ### Mapping openMSP430_design_constraints.csv file to format[1] compatible with Yosys(open source EDA tool) for Synthesis
 
-- SDC is a widely used industry standard by which constraints are defined for a digital design. Now let's extract clock information from the *.csv* file, process that information for creating clock SDC constraints. Then add those clock SDC constraints to the script and run it. 
+- SDC is a widely used industry standard by which constraints are defined for a digital design. Now let's extract clock information from the *openMSP430_design_constraints.csv* file and process that information for creating clock SDC constraints. 
 
 
 ![clock constraints](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/1_writing_clk_constraints.png) 
@@ -109,25 +109,25 @@ In such cases the user can exercise the `-help` option for this particualr scrip
 ![clock constraints 2](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/2_clk_sdc_constraints.png)
 
 
-- Next we can do the same thing for Input signals as well. The only difference in processing of input signals is that the input signal can be a bus or just a 1 bit signal in the netlist directory of *\*.v* files. The SDC constraints of a bus signal from single bit signal are differentiated by asterisk(\*). So all the input signals from openMSP430_design_constraints.csv file need to be looked into the netlist directory of *\*.v* files to check whether the signal is a input vector of length 1 or greater than 1.
+- Next we can do the same thing for Input signals as well. The only difference in processing of input signals is that the input signal can be a bus or just a 1 bit signal. The SDC constraints of a bus signal from single bit signal are differentiated by asterisk(\*) symbol. So all the input signals from openMSP430_design_constraints.csv file need to be looked into the netlist directory of *\*.v* files to check whether the signal is a input vector of length 1 or greater than 1.
 
 
 ![Input constraints1](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/3_working_on_input_constraints.png)
 
 
-- Here is a print of some formatting done of the input signals that are retrieved from *\*.v* files in the Netlist directory.
+- Here is a print of some formatting done of the input signals which are retrieved from *\*.v* files of the Netlist directory.
 
 
 ![Input constraints 2](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/4_formatting%20data%20for%20IO%20Constraints.png)
 
 
-- If the input signal grepped from *\*.v* file with *;* as the delimiter and in subsequent processing *" "* as the delimiter we come to know that if count i.e. length of list is 3 then the it's a bus else it's a 1 bit signal.
+- If the input signal grepped from *\*.v* file with *;* as the delimiter and in subsequent processing *" "* as the delimiter, we come to know that if count i.e. length of list is 3 then it's a bus else it's a 1 bit signal.
 
 
 ![Input constraints 3](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/5_differentiating%20buses%20from%20one%20bit%20signals.png)
 
 
-- To map Output signal constraints to SDC we need to follow the same steps as we did for input constraints. 
+- For mapping Output signal constraints to SDC we need to follow the same steps as we did for input constraints. 
 
 
 ![Output constraints 1](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%203/6_working%20on%20output%20constraints.png)
@@ -151,25 +151,25 @@ In such cases the user can exercise the `-help` option for this particualr scrip
 ![RTL Netlist](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/1_RTL%20Netlist%20for%20Yosys%20tool.png) 
 
 
-- For each RTL Netlist we do a syntax check by appending the command(specific to Yosys) corresponding to that operation in the *openMSP430.hier.ys* file and at the end of file we append the command corresponding to hierarchy check in the *openMSP430.hier.ys* file.
+- For each RTL Netlist we do a syntax check by appending the command(specific to Yosys) for syntax check in *openMSP430.hier.ys* file and at the end of file we append the command for hierarchy check in the *openMSP430.hier.ys* file.
 
 
 ![Reading RTL Netlist](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/2_Reading%20RTL%20Netlist.png)
 
 
-- We give this *openMSP430.hier.ys* file as an input to Yosys tool to check for syntax/hierarchy and report back if there is any error. If there is an error during the execution err flag is set to 1. 
+- We then give this *openMSP430.hier.ys* file as an input to the Yosys tool to check if there is any error in syntax or hierarchy. If there is an error err flag is set to 1. 
 
 
 ![Checking hierarchy using flag](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/3_checking_hierarchy%20using%20flag.png)
 
 
-- On checking the *openMSP430.hierarchy_check.log* it was clear tha it's a syntax error.
+- On checking the *openMSP430.hierarchy_check.log* file, we found that it's a syntax error.
 
 
 ![Syntax Error](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/4_syntax_error.png)
 
 
-- So we resolved it and now the err flag is set to 0.
+- So it was resolved and then the err flag is set to 0.
 
 
 ![Resolving syntax error](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/5_resolving%20syntax%20error.png)
@@ -181,19 +181,19 @@ In such cases the user can exercise the `-help` option for this particualr scrip
 ![Hierarchy check test failed](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/6_hierarchy_check_test_failed.png)
 
 
-- So again looked into the log file and found that it's a module instantiation error.
+- So i again looked into the log file and found that it's a module instantiation error.
 
 
 ![Checking log file](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/7_checking_log_file.png)
 
 
-- There was no module defined by the name of *omsp_clock_module_1*. Rather the module that is defined was *omsp_clock_module*.
+- There was no module defined by the name of *omsp_clock_module_1*. Rather the module *omsp_clock_module* was defined.
 
 
 ![Name Error](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/8_Name_error.png)
 
 
-- So i changed the parent module name to *omsp_clock_module*.
+- So i changed the parent module name to *omsp_clock_module* for creating it's instance.
 
 
 ![Correcting name error](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%204/9_correcting_error.png)
@@ -211,31 +211,31 @@ In such cases the user can exercise the `-help` option for this particualr scrip
 
 ### Converting Yosys tool's Synthesized Gate Level Output Netlist to a Format compatible with Opentimer(Open Source EDA Tool) for Timing Analysis__
 
-- We feed the standard cell library and RTL Netlist referenced through the *openMSP430.ys* file to Yosys EDA tool for creating gate level synthesized netlist in the file *openMSP430.synth.v*.
+- We give the standard cell library and RTL Netlist path in *openMSP430.ys* file as an input to Yosys EDA tool for creating gate level synthesized netlist in the file *openMSP430.synth.v*.
 
 
 ![Synthesizing Netlist](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/1_Synthesizing_netlist.png) 
 
 
-- Now we need to format the *openMSP430.synth.v* file to a format that is compatible with the opentimer EDA tool. So from the *openMSP430.synth.v* we remove all the lines containing an asterisk(\*) symbol and replace backslash(\\) symbol with a null character(*""*) to generate *openMSP430.final.synth.v* file 
+- Now we need to format the *openMSP430.synth.v* file to a format which is compatible with the opentimer EDA tool. So from the *openMSP430.synth.v* we remove all the lines containing an asterisk(\*) symbol and replace backslash(\\) symbol with a null character(*""*) to generate *openMSP430.final.synth.v* file. 
 
 
 ![Formatting synthesized netlist for opentimer](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/2_formatting_synthesized_netlist_for_opentimer.png)
 
 
-- Here is an example of how the formatting is done for *openMSP430.synth.v* file by removing the asterisk symbol from it. 
+- Here is an example of how the formatting is done for *openMSP430.synth.v* file by removing lines containing the asterisk symbol. 
 
 
 ![formatting - removing asterisk](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/3_formatting_removing_asterisk.png)
 
 
-- The below snapshot shows how the formatting is done for *openMSP430.synth.v* file by replacing *"\\"* character with a *""* character
+- The below snapshot shows how the formatting is done for *openMSP430.synth.v* file by replacing *"\\"* character with a *""* character.
 
 
 ![formatting replacing backslash with null](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/4_formatting_replacing_back_slash_with_null.png)
 
 
-- Proc is just like a function. We can define it in a file and then just source that proc to our main script and call that proc just like any other function by passing the required options and arguments. Here is an example of one of the proc used to define the number of threads.
+- Proc is just like a function. We can define it in a file and then just source that proc to our main script and call that proc just like any other function by passing the required options and arguments. Here is an example of one of the proc that is used to define the number of threads.
 
 
 ![Multi CPU Usage Proc](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/5_multi_cpu_usage_proc.png)
@@ -243,8 +243,8 @@ In such cases the user can exercise the `-help` option for this particualr scrip
 
 - We have used 5 procs in our script:
 
-1. *reopenStdout.proc* for redirecting the output generated by puts command from console to *.conf* file.
-2. *set_num_threads.proc* for setting number of threads/cores used to execute the further script.
+1. *reopenStdout.proc* for redirecting the output generated by puts command from console to *openMSP430.conf* file.
+2. *set_num_threads.proc* for setting number of threads/cores used to execute the script.
 3. *read_lib.proc* for reading the standard cell libraries.
 4. *read_verilog.proc* for reading the final synthesized RTL Netlist in *openMSP43.final.synth.v* file.
 5. *read_sdc.proc* for reading the sdc constraints.
@@ -325,4 +325,4 @@ In such cases the user can exercise the `-help` option for this particualr scrip
 ![Formatting Timing Report](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/17_timing_report_formatting.png)
 
 
-# Thanks For Watching My Repo. I Hope You Liked It :D
+*Thanks For Watching My Github Repo. I Hope You Liked It.* :D
