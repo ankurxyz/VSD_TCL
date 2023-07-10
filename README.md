@@ -325,4 +325,4 @@ In such cases the user can exercise the `-help` option for this particular scrip
 ![Formatting Timing Report](https://github.com/ankurxyz/VSD_TCL/blob/main/images/day%205/17_timing_report_formatting.png)
 
 
-*Thanks For Watching My Github Repo. I Hope You Liked It.* :D
+### Thanks For Watching My Github Repo. I Hope You Liked It. :D
